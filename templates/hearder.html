@@ -1,0 +1,58 @@
+<div class="header navbar navbar-inverse navbar-fixed-top">
+
+
+    <div class="navbar-inner">
+
+        <div class="container-fluid">
+
+            <!-- BEGIN LOGO -->
+
+            <a class="brand" href="{% url "index" %}">
+
+{#                <img src="/static/image/loggo-mini.png" alt="logo"/>#}
+
+            </a>
+
+            <!-- END LOGO -->
+
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+
+            <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+
+                <img src="/static/image/menu-toggler.png" alt=""/>
+
+            </a>
+
+            <!-- END RESPONSIVE MENU TOGGLER -->
+
+            <!-- BEGIN TOP NAVIGATION MENU -->
+
+            <ul class="nav pull-right">
+                <li class="dropdown user">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+{#                        <img alt="" src="/static/image/avatar1_small.jpg"/>#}
+
+                        <span class="username">{{ user.fullname }}</span>
+
+                        <i class="icon-angle-down"></i>
+
+                    </a>
+
+
+
+                </li>
+
+                <!-- END USER LOGIN DROPDOWN -->
+
+            </ul>
+
+            <!-- END TOP NAVIGATION MENU -->
+
+        </div>
+
+    </div>
+
+
+</div>

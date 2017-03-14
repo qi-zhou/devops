@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<!-- BEGIN HEAD -->
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>SSO | Login Page</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+    <meta content="" name="description"/>
+
+    <meta content="" name="author"/>
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="/static/css/style-metro.css" rel="stylesheet" type="text/css"/>
+
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>
+    <link href="/static/css/login.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/js/jquery-1.10.1.min.js"></script>
+
+    <link rel="shortcut icon" href="/static/image/favicon.ico"/>
+    {% block js %}
+    {% endblock %}
+
+</head>
+
+<!-- END HEAD -->
+
+<!-- BEGIN BODY -->
+
+<body class="login">
+
+<!-- BEGIN LOGO -->
+
+<div class="logo">
+    <h2 style="color: white">运维平台<span style="color: red">SSO</span></h2>
+</div>
+
+<!-- END LOGO -->
+
+<!-- BEGIN LOGIN -->
+<div class="content">
+
+    <!-- BEGIN LOGIN FORM -->
+    {% block content %}
+    {% endblock %}
+    <!-- END LOGIN FORM -->
+
+</div>
+
+<!-- END LOGIN -->
+
+<!-- BEGIN COPYRIGHT -->
+
+<div class="copyright">
+
+    2015 &copy; Minshengec.cn
+
+</div>
+
+<!-- END COPYRIGHT -->
+
+
+</body>
+
+<!-- END BODY -->
+
+</html>

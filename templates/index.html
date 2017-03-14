@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block page_title %}
+    {{ gonggao }}
+{% endblock %}
+
+
+{% block css %}
+    <style>
+        ::before {
+            cursor: hand;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <!--分类行-->
+    {% for so in fenlei %}
+        <div class="row-fluid">
+        <div class="tiles">
+            <ul class="breadcrumb">
+                <b>{{ forloop.counter }}.</b><li>{{ so.name }}</li>
+            </ul>
+            {% for foo in so.navpage_set.all %}
+                <!--方块-->
+                <a target="_blank" href="{{ foo.url }}">
+                    <div class="{{ foo.style }}">
+                        <div class="tile-body">
+                            <i class="{{ foo.ico }}"></i>
+                        </div>
+                        <div class="tile-object">
+                            <div class="name">
+                                {{ foo.name }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
