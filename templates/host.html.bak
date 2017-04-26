@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        主机名
+                    </th>
+                    <th>
+                        IP地址
+                    </th>
+                    <th>
+                        内存
+                    </th>
+                    <th>
+                        CPU核数
+                    </th>
+                    <th>
+                        磁盘
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for host in hostsinfo %}
+                    <tr>
+                        <td>
+                            {{ host.hostname }}
+                        </td>
+                        <td>
+                            {{ host.ip }}
+                        </td>
+                        <td>
+                            {{ host.osversion }}
+                        </td>
+                        <td>
+                            {{ host.memory }}
+                        </td>
+                        <td>
+                            {{ host.disk }}
+                        </td>
+                        <td>
+                            {{ host.cpu_core }}
+                        </td>
+                    </tr>
+                    {% csrf_token %} }
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

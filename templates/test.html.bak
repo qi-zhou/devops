@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+
+    #container {
+        width: 1002px;
+        background: gray;
+
+    }
+
+    #header {
+
+        height: 120px;
+        background: orange;
+
+    }
+
+    #main {
+        background: green;
+        height: 600px;
+
+    }
+
+    #lside {
+        width: 700px;
+        height: 600px;
+        float: right;
+        background: pink;
+
+    }
+
+    .four {
+        width: 130px;
+        height: 280px;
+        float: left;
+        margin: 10px;
+
+        background: white;
+
+    }
+
+    #rside {
+        width: 302px;
+        height: 600px;
+        background: purple;
+        float: right;
+    }
+
+    #footer {
+
+        height: 120px;
+        background: blue;
+
+    }
+
+</style>
+<body>
+<div id="container">
+
+    <div id="header">{{ gonggao }}</div>
+    {% for so in fenlei %}
+        <div id="main">
+            <div id="lside">
+                <b>{{ forloop.counter }}.</b>
+                {{ so.name }}
+                {% for foo in so.navpage_set.all %}
+                <div class="four">{{ foo.name }}</div>
+                {% endfor %}
+            </div>
+            <div id="lside"></div>
+        </div>
+    {% endfor %}
+    <div id="footer"></div>
+</div>
+</body>
+</html>
